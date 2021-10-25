@@ -33,51 +33,37 @@
     background-repeat: no-repeat;
     overflow: hidden;
     object-fit: cover;
-
-
   }
 }
 
-.anim-photo__back {
-  position: absolute;
-  z-index: 14;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  pointer-events: none;
-  background-origin: border-box;
-  background-repeat: no-repeat;
-  width: 100%;
-  overflow: hidden;
-  filter: grayscale(100%);
-  animation: linear grayScale0 2s 10s forwards;
 
-  img {
+.bg1__wrap {
+  height: 100vh;
+  @media screen and (max-width: 1720px) {
+    height: auto;
+  }
+
+  .anim-photo__back {
+    position: absolute;
+    z-index: 14;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
     pointer-events: none;
     background-origin: border-box;
     background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    filter: grayscale(100%);
+    animation: linear grayScale0 2s 10s forwards;
+
+    @media screen and (max-width: 1720px) {
+      height: 100%;
+    }
   }
 }
-
-/*.glass-search1 {
-  transition: clip-path 1s;
-  opacity: 0;
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  pointer-events: none;
-  z-index: 16;
-  background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
-  background-size: 750px 600px;
-  object-fit: cover;
-  clip-path: polygon(50% 0,69% 23%,98% 35%,75% 61%,79% 91%,48% 78%,21% 91%,20% 60%,2% 35%,28% 25%);
-}*/
 
 .wrap_anim_el_left {
   width: 50%;
@@ -88,6 +74,10 @@
   z-index: 20;
   filter: grayscale(100%);
   animation: linear grayScale0 1s 6s forwards;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 
   .glass-search1 {
     position: absolute;
@@ -102,6 +92,13 @@
     clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
     transform: translateX(-100px) rotate(-360deg);
     animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+
+    @media screen and (max-width: 1000px) {
+      width: 80px;
+      height: 80px;
+      left: 10px;
+      top: 10px;
+    }
   }
 
   .glass-search2 {
@@ -117,6 +114,12 @@
     clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
     transform: translateX(-100px) rotate(-360deg);
     animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+    @media screen and (max-width: 1000px) {
+      width: 120px;
+      height: 120px;
+      left: 10px;
+      top: 120px;
+    }
   }
 
   .glass-search3 {
@@ -132,6 +135,12 @@
     clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
     transform: translateX(-100px) rotate(-360deg);
     animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+    @media screen and (max-width: 1000px) {
+      width: 80px;
+      height: 80px;
+      left: 120px;
+      top: 10px;
+    }
   }
 
   .glass-search4 {
@@ -147,6 +156,12 @@
     clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
     transform: translateX(-100px) rotate(-360deg);
     animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+    @media screen and (max-width: 1000px) {
+      width: 70px;
+      height: 70px;
+      left: 145px;
+      top: 105px;
+    }
   }
 
   .glass-search5 {
@@ -162,6 +177,13 @@
     clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
     transform: translateX(-100px) rotate(-360deg);
     animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+
+    @media screen and (max-width: 1000px) {
+      width: 50px;
+      height: 50px;
+      left: 235px;
+      top: 41px;
+    }
   }
 }
 
@@ -230,6 +252,11 @@
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: translateX(100px) rotate(-360deg);
     animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+
+    @media screen and (max-width: 1000px) {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   .glass-search2 {
@@ -245,6 +272,12 @@
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: translateX(100px) rotate(-360deg);
     animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+    @media screen and (max-width: 1000px) {
+      width: 110px;
+      height: 110px;
+      right: 45px;
+      top: 135px;
+    }
   }
 
   .glass-search3 {
@@ -260,6 +293,12 @@
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: translateX(100px) rotate(-360deg);
     animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+    @media screen and (max-width: 1000px) {
+      width: 80px;
+      height: 80px;
+      right: 117px;
+      top: 83px;
+    }
   }
 
   .glass-search4 {
@@ -275,6 +314,12 @@
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: translateX(100px) rotate(-360deg);
     animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+    @media screen and (max-width: 1000px) {
+      width: 65px;
+      height: 65px;
+      right: 170px;
+      top: 142px;
+    }
   }
 
   .glass-search5 {
@@ -290,6 +335,12 @@
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: translateX(100px) rotate(-360deg);
     animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+    @media screen and (max-width: 1000px) {
+      width: 50px;
+      height: 50px;
+      right: 223px;
+      top: 115px;
+    }
   }
 }
 
@@ -330,6 +381,14 @@
   animation: linear handUp 3s 10s forwards;
   width: 950px;
   height: 540px;
+
+  @media screen and (max-width: 1200px) {
+    width: 320px;
+    height: 289px;
+    left: calc(50% - 160px);
+    bottom: -150px;
+    animation: none;
+  }
 }
 
 #cup__video {
@@ -337,8 +396,8 @@
   width: 316px;
   height: 256px;
   bottom: 152px;
-  border-radius: 0 0 230px 230px;
   left: 661px;
+  border-radius: 0 0 230px 230px;
   object-fit: cover;
   z-index: 100;
   pointer-events: none;
@@ -346,6 +405,14 @@
   border: 1px solid;
   overflow: hidden;
   background: 0 0;
+
+  @media screen and (max-width: 1200px) {
+    width: 65px;
+    height: 45px;
+    bottom: 152px;
+    left: 100px;
+    border-radius: 0 0 130px 130px;
+  }
 }
 
 #header {
