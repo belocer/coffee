@@ -11,10 +11,10 @@ window.addEventListener('load', () => {
     function startAnimate(el_container) {
         let img_parent_width = bg1.naturalWidth - (bg1.naturalWidth - bg1.clientWidth);
         let img_parent_height = bg1.naturalHeight - (bg1.naturalHeight - bg1.clientHeight);
-        console.log(bg1.naturalWidth);
+        /*console.log(bg1.naturalWidth);
         console.log(bg1.clientWidth);
         console.log(window.getComputedStyle(bg1).left);
-        console.log(window.getComputedStyle(bg1).width);
+        console.log(window.getComputedStyle(bg1).width);*/
         el_container.forEach(item => {
             item.style.backgroundSize = `${img_parent_width}px ${img_parent_height}px`;
             let rect = item.getBoundingClientRect();

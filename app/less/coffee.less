@@ -357,6 +357,24 @@
   }
 }
 
+@keyframes handUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 #snow__video {
   position: absolute;
   width: 100%;
@@ -378,7 +396,7 @@
   //background: url(../img/dest/hand_coffee_cup.webp) center center / cover no-repeat no-repeat;
   background: transparent;
   filter: brightness(.65);
-  animation: linear handUp 3s 10s forwards;
+  animation: linear handUp 3s 10s forwards, ease-in handUpDown 5s infinite;
   width: 950px;
   height: 540px;
 
@@ -405,6 +423,7 @@
   border: 1px solid;
   overflow: hidden;
   background: 0 0;
+  animation: ease-in handUpDown 5s infinite;
 
   @media screen and (max-width: 1200px) {
     width: 65px;
