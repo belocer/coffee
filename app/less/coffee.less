@@ -1,0 +1,372 @@
+.container1 {
+  z-index: 12;
+}
+
+.container2 {
+  z-index: 11;
+}
+
+.container3 {
+  z-index: 10;
+}
+
+.coffee__container {
+  height: 100vh;
+  overflow: hidden;
+  box-shadow: 0 0 50px 20px rgb(0, 0, 0, .3);
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .anim-photo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 16;
+    box-sizing: border-box;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    object-fit: cover;
+
+
+  }
+}
+
+.anim-photo__back {
+  position: absolute;
+  z-index: 14;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  pointer-events: none;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow: hidden;
+  filter: grayscale(100%);
+  animation: linear grayScale0 2s 10s forwards;
+
+  img {
+    pointer-events: none;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+/*.glass-search1 {
+  transition: clip-path 1s;
+  opacity: 0;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 16;
+  background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+  background-size: 750px 600px;
+  object-fit: cover;
+  clip-path: polygon(50% 0,69% 23%,98% 35%,75% 61%,79% 91%,48% 78%,21% 91%,20% 60%,2% 35%,28% 25%);
+}*/
+
+.wrap_anim_el_left {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  filter: grayscale(100%);
+  animation: linear grayScale0 1s 6s forwards;
+
+  .glass-search1 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 30;
+    width: 200px;
+    height: 200px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    transform: translateX(-100px) rotate(-360deg);
+    animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+  }
+
+  .glass-search2 {
+    position: absolute;
+    left: 20px;
+    top: 240px;
+    z-index: 30;
+    width: 250px;
+    height: 250px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    transform: translateX(-100px) rotate(-360deg);
+    animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+  }
+
+  .glass-search3 {
+    position: absolute;
+    left: 240px;
+    top: 20px;
+    z-index: 30;
+    width: 170px;
+    height: 170px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    transform: translateX(-100px) rotate(-360deg);
+    animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+  }
+
+  .glass-search4 {
+    position: absolute;
+    left: 290px;
+    top: 210px;
+    z-index: 30;
+    width: 140px;
+    height: 140px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    transform: translateX(-100px) rotate(-360deg);
+    animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+  }
+
+  .glass-search5 {
+    position: absolute;
+    left: 432px;
+    top: 83px;
+    z-index: 30;
+    width: 100px;
+    height: 100px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    transform: translateX(-100px) rotate(-360deg);
+    animation: linear left_figure 2s forwards, linear twitchy 3s 3s infinite;
+  }
+}
+
+.filterBrightness {
+  filter: brightness(0.8);
+}
+
+.filterGrayscale {
+  //filter: grayscale(90%);
+}
+
+@keyframes left_figure {
+  /*
+  0% {
+    transform: translateX(-100px) rotate(-360deg);
+  }
+  */
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes twitchy {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  10% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  20% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  30% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+.wrap_anim_el_right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  filter: grayscale(100%);
+  animation: linear grayScale0 1s 9s forwards;
+
+  .glass-search1 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 30;
+    width: 300px;
+    height: 300px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translateX(100px) rotate(-360deg);
+    animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+  }
+
+  .glass-search2 {
+    position: absolute;
+    right: 92px;
+    top: 270px;
+    z-index: 30;
+    width: 250px;
+    height: 250px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translateX(100px) rotate(-360deg);
+    animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+  }
+
+  .glass-search3 {
+    position: absolute;
+    right: 235px;
+    top: 167px;
+    z-index: 30;
+    width: 170px;
+    height: 170px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translateX(100px) rotate(-360deg);
+    animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+  }
+
+  .glass-search4 {
+    position: absolute;
+    right: 340px;
+    top: 284px;
+    z-index: 30;
+    width: 140px;
+    height: 140px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translateX(100px) rotate(-360deg);
+    animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+  }
+
+  .glass-search5 {
+    position: absolute;
+    right: 446px;
+    top: 235px;
+    z-index: 30;
+    width: 100px;
+    height: 100px;
+    background: url(../img/dest/woods.webp) center center no-repeat no-repeat;
+    object-fit: cover;
+    transition: all 1s;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: translateX(100px) rotate(-360deg);
+    animation: linear left_figure 2.5s 2s forwards, linear twitchy 3.5s 6s infinite;
+  }
+}
+
+@keyframes grayScale0 {
+  100% {
+    filter: grayScale(0)
+  }
+}
+
+@keyframes handUp {
+  100% {
+    left: 341px;
+    bottom: -82px;
+  }
+}
+
+#snow__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 100;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  overflow: hidden;
+}
+
+.hand {
+  position: absolute;
+  left: calc(50% - 475px);
+  bottom: -1282px;
+  z-index: 30;
+  //background: url(../img/dest/hand_coffee_cup.webp) center center / cover no-repeat no-repeat;
+  background: transparent;
+  filter: brightness(.65);
+  animation: linear handUp 3s 10s forwards;
+  width: 950px;
+  height: 540px;
+}
+
+#cup__video {
+  position: absolute;
+  width: 316px;
+  height: 256px;
+  bottom: 152px;
+  border-radius: 0 0 230px 230px;
+  left: 661px;
+  object-fit: cover;
+  z-index: 100;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  border: 1px solid;
+  overflow: hidden;
+  background: 0 0;
+}
+
+#header {
+  font-size: 130px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  transform: translate(-50%, -50%);
+  width: 955px;
+
+  @media screen and (max-width: 1200px) {
+    width: 80%;
+  }
+
+  path {
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 10px;
+    fill: rgba(141, 141, 141, 0.5);
+    stroke-width: 3px;
+    stroke: rgb(255, 255, 255);
+  }
+}
+
